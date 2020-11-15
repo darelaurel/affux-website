@@ -71,12 +71,20 @@ button, button:hover, button:focus, button:active {
   position: fixed;
   z-index: 9999;
   width: 100%;
-  padding-top: 0.8rem;
+  padding-top: 0.1rem;
 }
 .navbar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.navbar .logo-title {
+  display: inline-block;
+  position: relative;
+  top: -2rem;
+  font-weight: 300;
+  letter-spacing: 0.9px;
+  font-size: 1.2rem;
 }
 .navbar .menu li {
   list-style: none;
@@ -121,12 +129,17 @@ button, button:hover, button:focus, button:active {
   margin: auto 0 auto auto 40px;
 }
 .home-section .home-content .text {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 .home-section .home-content .text-desc {
+  display: block;
+  margin-top: 1.2rem;
   font-size: 1rem;
   font-weight: 500;
+}
+.home-section .home-content .text-desc p {
+  margin-top: 0.6rem;
 }
 .home-section .home-right {
   margin: auto 120px auto 0;
@@ -136,10 +149,10 @@ button, button:hover, button:focus, button:active {
 }
 .home-section .btn-audit {
   display: block;
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-  color: #fff;
+  background: #000;
+  color: #f7f7f7;
   border-radius: 6px;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 .home-section .btn-audit:hover {
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -159,13 +172,19 @@ button, button:hover, button:focus, button:active {
 .about-section .about-text {
   margin-top: 2rem;
   color: #000;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
 }
 
 .offers-section {
   background-color: #e2e2e2;
+  padding-bottom: 1rem;
   width: 100%;
 }
 .offers-section .card {
+  flex-basis: 100%;
   background: #f7f7f7;
   display: inline-block;
   color: #000;
@@ -174,7 +193,6 @@ button, button:hover, button:focus, button:active {
   border-radius: 0.5rem;
   margin: 2rem;
   cursor: pointer;
-  transition: all ease 0.6s;
 }
 .offers-section .card .card-image, .offers-section .card .card-body, .offers-section .card .card-title {
   padding: 0.5rem 0 0.8rem 0;
@@ -212,9 +230,21 @@ button, button:hover, button:focus, button:active {
   font-size: 1rem;
   font-weight: 500;
   position: relative;
-  text-align: left;
+  text-align: center;
   color: #000;
   cursor: pointer;
+}
+.process-section .container .progressbar li .progress-list {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.5px;
+}
+.process-section .container .progressbar li .progress-title {
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .process-section .container .progressbar li:before {
   width: 30px;
@@ -336,6 +366,7 @@ button, button:hover, button:focus, button:active {
   display: block;
   margin: 2rem auto auto;
   background: #FAB162;
+  color: navy;
   border-radius: 6px;
   padding: 1rem 3rem;
 }
@@ -355,11 +386,25 @@ button, button:hover, button:focus, button:active {
 .footer .footer-down {
   padding: 0.8rem 2rem;
 }
+.footer .footer-down span {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
 
 section:not(.about-section) {
   padding-top: 2rem;
 }
 
+@media screen and (max-width:1299px) {
+  .home-section .home-content .text {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .home-section .home-content .text-desc {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
 @media screen and (max-width:992px) {
   .w-90 {
     width: 100%;
@@ -477,11 +522,11 @@ section:not(.about-section) {
   }
   .home-section .home-content .text {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 400;
   }
   .home-section .home-content .text-desc {
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
   }
   .home-section .home-right {
     margin: auto 42px auto 0;

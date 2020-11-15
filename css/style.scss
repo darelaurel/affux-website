@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;300;500;700;800&display=swap');
 $large:"992px";
 $largeMin:"776px";
+$largeFirst:"1299px";
+$resolutionFirst:"screen and (max-width:#{$largeFirst})";
 $resolution:"screen and (max-width:#{$large})";
 $resolutionMin:"screen and (max-width:#{$largeMin})";
 $curve-animation:"cubic-bezier(1,0,0,1)";
@@ -80,7 +82,7 @@ button, button:hover, button:focus, button:active
     position: fixed;
     z-index: 9999;
     width: 100%;
-    padding-top: .8rem;
+    padding-top: .1rem;
 
     .max-width
     {
@@ -88,7 +90,15 @@ button, button:hover, button:focus, button:active
         align-items: center;
         justify-content: space-between;
     }
-    
+    .logo-title
+    {
+        display: inline-block;
+        position: relative;
+        top: -2rem;
+        font-weight:300;
+        letter-spacing: .9px;
+        font-size: 1.2rem;
+    }
     .menu li
     {
         list-style: none;
@@ -143,15 +153,24 @@ button, button:hover, button:focus, button:active
     {   
         margin: auto 0 auto auto 40px; 
     }
-    .home-content .text
-    {   
-        font-size: 3rem;
-        font-weight: 800;
-    }
-    .home-content .text-desc
-    {   
-        font-size: 1rem;
-        font-weight: 500;
+    .home-content
+    {
+        .text
+        {   
+            font-size: 2.2rem;
+            font-weight: 400;
+        }
+        .text-desc
+        {   
+            display: block;
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            p
+            {
+                margin-top: .6rem;
+            }
+        }
     }
     .home-right
     {
@@ -164,10 +183,11 @@ button, button:hover, button:focus, button:active
     .btn-audit
     {
         display: block;
-        background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-        color:#fff;
+        background: #000;
+        color:#f7f7f7;
         border-radius: 6px;
-        margin-top: 1rem;
+        margin-top: 1.4rem;
+ 
         &:hover
         {
             background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -193,14 +213,20 @@ button, button:hover, button:focus, button:active
     {
         margin-top: 2rem;
         color: #000;
+        display: block;
+        font-size: 1rem;
+        font-weight:500;
+        letter-spacing: .8px;
     }
 }
 .offers-section
 {
     background-color: #e2e2e2;
+    padding-bottom: 1rem;
     width: 100%;
     .card
     {
+        flex-basis: 100%;
         background: #f7f7f7;
         display: inline-block;
         color: #000;
@@ -209,7 +235,6 @@ button, button:hover, button:focus, button:active
         border-radius: .5rem;
         margin: 2rem;
         cursor: pointer;
-        transition: all ease .6s;
 
         .card-image, .card-body, .card-title
         {
@@ -222,13 +247,13 @@ button, button:hover, button:focus, button:active
             font-weight: 700;
         }
     } 
+
 }
 .process-section
 {   
     .container 
     {
         margin: 2rem auto; 
-        
         .progressbar 
         {
             counter-reset: step;
@@ -246,9 +271,25 @@ button, button:hover, button:focus, button:active
             font-size: 1rem;
             font-weight: 500;
             position: relative;
-            text-align: left;
+            text-align: center;
             color: #000;
             cursor: pointer; 
+
+            .progress-list
+            {
+                display: block;
+                font-size: .9rem;
+                margin-top: .3rem;
+                letter-spacing: .5px;
+            }
+
+            .progress-title
+            {
+                font-size: 1.3rem;
+                display: block;
+                text-align: center;
+                margin-bottom: 1rem;
+            }  
         }
         .progressbar li:before {
             width: 30px;
@@ -395,6 +436,7 @@ button, button:hover, button:focus, button:active
             display: block;
             margin: 2rem auto auto;
             background: #FAB162;
+            color: navy;
             border-radius: 6px;
             padding: 1rem 3rem;
         }
@@ -419,6 +461,11 @@ button, button:hover, button:focus, button:active
     .footer-down
     {
         padding: .8rem 2rem;
+        span
+        {
+            font-family: 'Montserrat';
+            font-weight: 700;
+        }
     }
 }
 section:not(.about-section)
@@ -426,6 +473,23 @@ section:not(.about-section)
     padding-top: 2rem;
 }
 
+@media #{$resolutionFirst}
+{
+    .home-section
+    {
+       
+        .home-content .text
+        {   
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+        .home-content .text-desc
+        {   
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}
 
 @media #{$resolution}
 {
@@ -564,12 +628,13 @@ section:not(.about-section)
         .home-content .text
         {   
             font-size: 2rem;
-            font-weight: 500;
+            font-weight: 400;
         }
         .home-content .text-desc
         {   
-            font-size: .7rem;
-            font-weight: 500;
+            font-size: 1rem;
+            font-weight: 400;
+            
         }
         .home-right
         {
